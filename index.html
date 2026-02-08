@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal domain landing page." />
+  <title>Scott — Personal Domain</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111826;
+      --text: #e6edf3;
+      --muted: #9aa4b2;
+      --link: #7dd3fc;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 10%, #142036 0%, transparent 60%),
+                  radial-gradient(1000px 500px at 80% 20%, #0b3a4a 0%, transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    .card {
+      background: rgba(17,24,38,0.85);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    }
+    h1 { margin: 0 0 10px; font-size: 34px; letter-spacing: -0.5px; }
+    .tagline { margin: 0 0 22px; color: var(--muted); font-size: 16px; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 6px; }
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125,211,252,0.35);
+    }
+    a:hover { border-bottom-color: rgba(125,211,252,0.9); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+    ul { margin: 10px 0 0 18px; color: var(--muted); }
+    footer { margin-top: 16px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Scott</h1>
+      <p class="tagline">Personal domain for email + a simple landing page.</p>
+
+      <div class="row">
+        <!-- Replace with your real addresses/links -->
+        <span class="pill">Email: <a href="mailto:scott@scotthenry.com">scott@scotthenry.com</a></span>
+        <span class="pill">LinkedIn: <a href="https://www.linkedin.com/in/davidscotthenry">/in/YOUR-HANDLE</a></span>
+        <span class="pill">GitHub: <a href="https://github.com/YOUR-USERNAME">@YOUR-USERNAME</a></span>
+      </div>
+
+      <h2 style="margin:22px 0 8px; font-size:18px;">About</h2>
+      <ul>
+        <li>Business Intelligence / data + reporting</li>
+        <li>Based in Texas</li>
+        <li>This site exists mainly to support custom email addresses</li>
+      </ul>
+
+      <footer>
+        © <span id="year"></span> Scott
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
